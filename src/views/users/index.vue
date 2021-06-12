@@ -13,8 +13,7 @@ export default {
 </script>
 
 <template>
-  <div id="step1">
-    <el-backtop></el-backtop>
+  <div id="index">
     <el-steps :active="0" simple>
       <el-step title="步驟 1 網路掛號" icon="el-icon-edit"></el-step>
       <el-step title="步驟 2 填寫初診單" icon="el-icon-upload"></el-step>
@@ -27,12 +26,12 @@ export default {
     <h1>網路掛號</h1>
 
     <!-- 輸入姓名 -->
-    <el-form :inline="true" :model="newName5" class="demo-form-inline">
+    <el-form :inline="true" :model="newName" class="demo-form-inline">
       <el-form-item label="身分證 / 居留證號碼 / 病歷號碼：">
-        <el-input v-model="newName" placeholder="輸入"></el-input>
+        <el-input v-model="newName.user" placeholder="輸入"></el-input>
       </el-form-item>
       <el-form-item label="看診方式：">
-        <el-select v-model="newName5.region" placeholder="請選擇">
+        <el-select v-model="newName.region" placeholder="請選擇">
           <el-option label="到院看診" value="123"></el-option>
           <el-option label="電話看診" value="456"></el-option>
         </el-select>
@@ -51,6 +50,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-#step1 {
+#index {
 }
 </style>

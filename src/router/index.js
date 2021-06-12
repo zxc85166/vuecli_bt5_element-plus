@@ -1,45 +1,39 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/Home.vue";
-import page2 from "@/views/page2.vue";
-import page3 from "@/views/page3.vue";
-import page4 from "@/views/page4.vue";
-import page5 from "@/views/page5.vue";
-import users from "@/views/users.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () => import("@/views/Home"),
   },
   {
     path: "/page2",
     name: "page2",
-    component: page2,
+    component: () => import("@/views/page2"),
   },
   {
     path: "/page3",
     name: "page3",
-    component: page3,
+    component: () => import("@/views/page3"),
   },
   {
     path: "/page4",
     name: "page4",
-    component: page4,
+    component: () => import("@/views/page4"),
   },
   {
     path: "/page5",
     name: "page5",
-    component: page5,
+    component: () => import("@/views/page5"),
   },
   {
     path: "/users",
     name: "users",
-    component: users,
-    // redirect: "/users/index",
+    component: () => import("@/views/users"),
+    redirect: "/users/index",
     children: [
       {
-        path: "/",
+        path: "/users/index",
         name: "index",
         component: () => import("@/views/users/index"),
       },

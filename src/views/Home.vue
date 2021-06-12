@@ -4,7 +4,7 @@ export default {};
 </script>
 
 <template>
-  <div id="index">
+  <div id="Home">
     <el-backtop></el-backtop>
     <el-carousel :interval="4000" class="max-h-1000" height="870px">
       <el-carousel-item v-for="item in 4" :key="item"> </el-carousel-item>
@@ -216,7 +216,7 @@ export default {};
 </template>
 
 <style lang="scss" scoped>
-#index {
+#Home {
   .el-carousel__item:nth-last-child(4) {
     background-image: url(https://www.medicaltravel.org.tw/img/section1bg1.jpg);
   }
