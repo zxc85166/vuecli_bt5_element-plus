@@ -5,19 +5,17 @@ export default {
 </script>
 <template>
   <div id="users">
-    <section class="container">
-      <nav class="flex justify-items-start">
-        <router-link to="/users/step2">步驟 2</router-link>
-        <router-link to="/users/step3">步驟 3</router-link>
-        <router-link to="/users/step4">步驟 4</router-link>
-        <router-link to="/users/step5">步驟 5</router-link>
-        <router-link to="/users/step6">步驟 6</router-link>
-        <router-link to="/users/step7">步驟 7</router-link>
-      </nav>
-      <main>
-        <router-view />
-      </main>
-    </section>
+    <nav class="flex justify-items-start">
+      <router-link to="/users/step2">步驟 2</router-link>
+      <router-link to="/users/step3">步驟 3</router-link>
+      <router-link to="/users/step4">步驟 4</router-link>
+      <router-link to="/users/step5">步驟 5</router-link>
+      <router-link to="/users/step6">步驟 6</router-link>
+      <router-link to="/users/step7">步驟 7</router-link>
+    </nav>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 <style scoped lang="scss">

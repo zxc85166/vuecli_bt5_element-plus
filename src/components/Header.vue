@@ -7,7 +7,7 @@ export default {
   },
   methods: {
     order() {
-      this.$router.push('/');
+      this.$router.push("/");
     },
   },
 };
@@ -94,7 +94,7 @@ a:hover {
 }
 a:after,
 a:before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }

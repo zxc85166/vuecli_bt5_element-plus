@@ -1,72 +1,79 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import index from '@/views/index.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "@/views/Home.vue";
+import page2 from "@/views/page2.vue";
+import page3 from "@/views/page3.vue";
+import page4 from "@/views/page4.vue";
+import page5 from "@/views/page5.vue";
+import users from "@/views/users.vue";
+
 const routes = [
   {
-    path: '/',
-    name: 'index',
-    component: index,
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/users',
-    name: 'users',
-    component: () => import('@/views/users.vue'),
+    path: "/page2",
+    name: "page2",
+    component: page2,
+  },
+  {
+    path: "/page3",
+    name: "page3",
+    component: page3,
+  },
+  {
+    path: "/page4",
+    name: "page4",
+    component: page4,
+  },
+  {
+    path: "/page5",
+    name: "page5",
+    component: page5,
+  },
+  {
+    path: "/users",
+    name: "users",
+    component: users,
+    // redirect: "/users/index",
     children: [
       {
-        path: '/users/index',
-        name: 'index',
-        component: () => import('@/views/users/index.vue'),
+        path: "/",
+        name: "index",
+        component: () => import("@/views/users/index"),
       },
       {
-        path: '/users/step2',
-        name: 'step2',
-        component: () => import('@/views/users/step2.vue'),
+        path: "/users/step2",
+        name: "step2",
+        component: () => import("@/views/users/step2"),
       },
       {
-        path: '/users/step3',
-        name: 'step3',
-        component: () => import('@/views/users/step3.vue'),
+        path: "/users/step3",
+        name: "step3",
+        component: () => import("@/views/users/step3"),
       },
       {
-        path: '/users/step4',
-        name: 'step4',
-        component: () => import('@/views/users/step4.vue'),
+        path: "/users/step4",
+        name: "step4",
+        component: () => import("@/views/users/step4"),
       },
       {
-        path: '/users/step5',
-        name: 'step5',
-        component: () => import('@/views/users/step5.vue'),
+        path: "/users/step5",
+        name: "step5",
+        component: () => import("@/views/users/step5"),
       },
       {
-        path: '/users/step6',
-        name: 'step6',
-        component: () => import('@/views/users/step6.vue'),
+        path: "/users/step6",
+        name: "step6",
+        component: () => import("@/views/users/step6"),
       },
       {
-        path: '/users/step7',
-        name: 'step7',
-        component: () => import('@/views/users/step7.vue'),
+        path: "/users/step7",
+        name: "step7",
+        component: () => import("@/views/users/step7"),
       },
     ],
-  },
-  {
-    path: '/page2',
-    name: 'page2',
-    component: () => import('@/views/page2.vue'),
-  },
-  {
-    path: '/page3',
-    name: 'page3',
-    component: () => import('@/views/page3.vue'),
-  },
-  {
-    path: '/page4',
-    name: 'page4',
-    component: () => import('@/views/page4.vue'),
-  },
-  {
-    path: '/page5',
-    name: 'page5',
-    component: () => import('@/views/page5.vue'),
   },
 ];
 

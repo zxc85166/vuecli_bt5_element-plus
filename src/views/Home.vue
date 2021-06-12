@@ -1,10 +1,6 @@
 <script>
 // @ is an alias to /src
-export default {
-  async asyncData() {
-    return {};
-  },
-};
+export default {};
 </script>
 
 <template>
@@ -244,13 +240,6 @@ export default {
   .scale:hover {
     transform: scale(1.1);
   }
-  // //////////////////////////
-  // figure {
-  //   // background: url(https://www.medicaltravel.org.tw/img/section1bg1.jpg);
-  //   // background-size: cover;
-  //   // background-position: center;
-  //   height: 100vh;
-  // }
 
   .menu {
     display: none;

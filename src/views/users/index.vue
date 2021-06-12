@@ -1,6 +1,5 @@
 <script>
 export default {
-  components: {},
   data() {
     return {
       newName: {
@@ -14,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div id="page1index">
+  <div id="step1">
     <el-backtop></el-backtop>
     <el-steps :active="0" simple>
       <el-step title="步驟 1 網路掛號" icon="el-icon-edit"></el-step>
@@ -28,7 +27,6 @@ export default {
     <h1>網路掛號</h1>
 
     <!-- 輸入姓名 -->
-
     <el-form :inline="true" :model="newName5" class="demo-form-inline">
       <el-form-item label="身分證 / 居留證號碼 / 病歷號碼：">
         <el-input v-model="newName" placeholder="輸入"></el-input>
@@ -53,6 +51,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-#page1index {
+#step1 {
 }
 </style>
