@@ -35,7 +35,7 @@ export default {
             <div class="card border-info text-center">
               <div class="card-header">您的掛號號碼:</div>
               <div class="card-body">
-                <h5 class="card-title">100</h5>
+                <h5 class="card-title">101</h5>
               </div>
             </div>
             <div class="card border-info text-center">
