@@ -1,30 +1,41 @@
+<script>
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <Header />
+    <router-view></router-view>
+    <Footer />
   </div>
-  <router-view />
 </template>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 147, 243, 0.5),
+      rgba(147, 147, 216, 0.5)
+    ),
+    url('~@/assets/images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  text-decoration: none;
 }
 </style>
