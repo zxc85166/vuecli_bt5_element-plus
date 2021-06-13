@@ -32,10 +32,10 @@ export default {
     handleDownload(file) {
       console.log(file);
     },
-  },
-  //push
-  order() {
-    this.$router.push("/users/step3");
+    //push
+    order() {
+      this.$router.push("/users/step3");
+    },
   },
 };
 </script>
