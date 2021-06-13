@@ -19,7 +19,7 @@ export default {
     </main>
   </div>
 </template>
-<style scoped lang="scss">
+<style lang="scss" scoped>
 #users {
   a {
     margin: 0 20px;
@@ -34,5 +34,6 @@ export default {
   a.router-link-exact-active {
     color: #00c58e;
   }
+  text-align: center;
 }
 </style>

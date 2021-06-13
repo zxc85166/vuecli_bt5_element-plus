@@ -1,284 +1,285 @@
 <script>
 // @ is an alias to /src
-export default {};
+import $ from "jquery";
+export default {
+  data() {
+    return {};
+  },
+  methods() {
+    $(function () {
+      setTimeout(() => {
+        $(".text-animation").removeClass("hidden");
+      }, 500);
+    });
+  },
+};
 </script>
 
 <template>
   <div id="Home">
-    <el-backtop></el-backtop>
-    <el-carousel :interval="4000" class="max-h-1000" height="870px">
-      <el-carousel-item v-for="item in 4" :key="item"> </el-carousel-item>
-    </el-carousel>
-
-    <!-- ??? -->
-
-    <div class="bg-gray-200 py-20">
-      <h1 class="text-4xl font-bold text-center mb-10">特色醫療</h1>
-      <div class="container max-w-screen-xl mx-auto flex flex-wrap">
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
-          </div>
-        </div>
-        <div class="flex w-full md:w-4/12 px-4 mb-10">
-          <div class="bg-white flex">
-            <img
-              src="https://www.medicaltravel.org.tw/images/icon/SVG-15.svg"
-              alt=""
-              width="100px"
-              class="pl-4"
-            />
-            <p class="p-3 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              perspiciatis quia quo vel placeat explicabo esse corporis beatae
-              accusantium quas.
-            </p>
+    <!-- section -->
+    <section class="vh-100">
+      <div class="container h-100 aaa">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <ul
+              class="text-animation hidden w-100 h-100 text-center text-white"
+            >
+              <li>E</li>
+              <li>化</li>
+              <li>醫</li>
+              <li>療</li>
+              <li>一</li>
+              <li>流</li>
+              <li>體</li>
+              <li>驗</li>
+            </ul>
           </div>
         </div>
       </div>
-      <h1 class="text-4xl font-bold text-center my-10">特色醫療</h1>
-      <ul class="flex flex-wrap max-w-screen-xl mx-auto">
-        <li class="w-1/4 p-2">
-          <img
-            src="https://images.unsplash.com/photo-1623180872639-419a60085406?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-            class="w-full"
-          />
-          <div class="bg-white p-2">
-            <h1 class="text-xl font-bold mb-2">Lorem, ipsum dolor.</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-              aliquam.
-            </p>
+    </section>
+    <!--  -->
+    <div class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="fw-bold mb-4">服務宗旨</h1>
+            <p>沒有服務</p>
           </div>
-        </li>
-        <li class="w-1/4 p-2">
-          <img
-            src="https://images.unsplash.com/photo-1623180872639-419a60085406?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-            class="w-full"
-          />
-          <div class="bg-white p-2">
-            <h1 class="text-xl font-bold mb-2">Lorem, ipsum dolor.</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-              aliquam.
-            </p>
-          </div>
-        </li>
-        <li class="w-1/4 p-2">
-          <img
-            src="https://images.unsplash.com/photo-1623180872639-419a60085406?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-            class="w-full"
-          />
-          <div class="bg-white p-2">
-            <h1 class="text-xl font-bold mb-2">Lorem, ipsum dolor.</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-              aliquam.
-            </p>
-          </div>
-        </li>
-        <li class="w-1/4 p-2">
-          <img
-            src="https://images.unsplash.com/photo-1623180872639-419a60085406?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-            class="w-full"
-          />
-          <div class="bg-white p-2">
-            <h1 class="text-xl font-bold mb-2">Lorem, ipsum dolor.</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-              aliquam.
-            </p>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
-    <!-- Carousel wrapper -->
+    <!--  -->
+    <div class="py-5">
+      <div class="container">
+        <h1 class="py-3">最新消息</h1>
+        <div class="row justify-content-center d-none d-md-flex">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="https://fakeimg.pl/250x180/" class="card-image-top" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="https://fakeimg.pl/250x180/" class="card-image-top" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="https://fakeimg.pl/250x180/" class="card-image-top" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="https://fakeimg.pl/250x180/" class="card-image-top" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-md-none">
+          <div class="col">
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img src="https://fakeimg.pl/170x180/" alt="..." />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img src="https://fakeimg.pl/170x180/" alt="..." />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img src="https://fakeimg.pl/170x180/" alt="..." />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img src="https://fakeimg.pl/170x180/" alt="..." />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 #Home {
-  .el-carousel__item:nth-last-child(4) {
-    background-image: url(https://www.medicaltravel.org.tw/img/section1bg1.jpg);
+  section {
+    background-image: url(https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  .el-carousel__item:nth-last-child(3) {
-    background-image: url(https://www.medicaltravel.org.tw/img/section1bg1.jpg);
-  }
-  .el-carousel__item:nth-last-child(2) {
-    background-image: url(https://www.medicaltravel.org.tw/img/section1bg1.jpg);
-  }
-  .el-carousel__item:nth-last-child(1) {
-    background-image: url(https://www.medicaltravel.org.tw/img/section1bg1.jpg);
-  }
-  .max-h-1000 {
-    max-height: 1000px;
-  }
-  .scale {
-    transition: all 0.5s;
+  .text-animation {
+    list-style: none;
   }
 
-  .scale:hover {
-    transform: scale(1.1);
+  .text-animation li {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    opacity: 1;
+    border: 3px solid white;
+    transition: all 2.5s ease;
   }
 
-  .menu {
-    display: none;
+  .text-animation li:first-child {
+    width: 86px;
   }
 
-  .bar {
-    height: 1px;
-    background-color: #000;
-    margin: 6px 0;
-    width: 25px;
+  .text-animation li:last-child {
+    margin-right: 0;
   }
 
-  @media screen and (max-width: 1000px) {
-    #rightBar {
+  .text-animation.hidden {
+    opacity: 0;
+  }
+
+  .text-animation.hidden li:nth-child(1) {
+    transform: translate(-200px, -200px);
+  }
+
+  .text-animation.hidden li:nth-child(2) {
+    transform: translate(20px, 100px);
+  }
+
+  .text-animation.hidden li:nth-child(3) {
+    transform: translate(-150px, -80px);
+  }
+
+  .text-animation.hidden li:nth-child(4) {
+    transform: translate(10px, -200px);
+  }
+
+  .text-animation.hidden li:nth-child(5) {
+    transform: translate(-300px, 200px);
+  }
+
+  .text-animation.hidden li:nth-child(6) {
+    transform: translate(20px, -20px);
+  }
+
+  .text-animation.hidden li:nth-child(7) {
+    transform: translate(30px, 200px);
+  }
+
+  .text-animation.hidden li:nth-child(8) {
+    transform: translate(-200px, -200px);
+  }
+
+  .text-animation.hidden li:nth-child(9) {
+    transform: translate(10px, -200px);
+  }
+
+  .text-animation.hidden li:nth-child(10) {
+    transform: translate(-300px, 200px);
+  }
+
+  @media screen and (max-width: 992px) {
+    .aaa {
       display: none;
     }
+  }
 
-    #header {
-      justify-content: space-between;
-    }
+  .fill-current {
+    fill: currentColor;
+  }
 
-    nav {
-      display: none;
-    }
-
-    nav ul {
-      flex-direction: column;
-      border: none;
-    }
-
-    nav ul li a {
-      border: none;
-      font-size: 20px;
-    }
-
-    .menu {
-      display: block;
-      justify-self: center;
-    }
+  .gray {
+    color: #646464;
   }
 }
 </style>

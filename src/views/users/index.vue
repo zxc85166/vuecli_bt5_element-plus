@@ -1,14 +1,25 @@
 <script>
+import $ from "jquery";
 export default {
   data() {
     return {
+      className: "",
       newName: {
         user: "",
         region: "",
       },
     };
   },
-  methods: {},
+  methods: {
+    //push
+    order() {
+      this.$router.push("/users/step2");
+    },
+    changecolor() {
+      $("body").removeClass();
+      $("body").addClass(this.className);
+    },
+  },
 };
 </script>
 
@@ -37,15 +48,26 @@ export default {
         </el-select>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" icon="el-icon-search" @click="saveName"
+        <el-button type="primary" icon="el-icon-search" @click="order"
           >初診</el-button
         >
-        <el-button type="primary" @click="saveName"
+        <el-button type="primary" @click="order"
           >複診<i class="el-icon-s-claim el-icon--right"></i
         ></el-button>
       </el-form-item>
     </el-form>
     <!-- 輸入姓名 -->
+    <div class="row">
+      <div class="clo-4">
+        <input type="text" class="form-control" v-model="className" />
+      </div>
+      <div class="clo-4">
+        <button class="btn btn-primary form-control" @click="changecolor">
+          更換body顏色
+        </button>
+      </div>
+      <p>(例：bg-dark、bg-secondary、bg-success、bg-danger、bg-warning)</p>
+    </div>
   </div>
 </template>
 

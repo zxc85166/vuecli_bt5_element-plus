@@ -7,7 +7,7 @@ export default {
   },
   methods: {
     order() {
-      this.$router.push("/users/step6");
+      this.$router.push("/users/step6#step6");
     },
   },
 };

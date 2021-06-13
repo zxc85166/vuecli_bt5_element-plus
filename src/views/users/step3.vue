@@ -3,14 +3,57 @@ export default {
   components: {},
   data() {
     return {
-      message: "",
-      currentDate: new Date(),
+      nowDay: "",
+      nowTime: "",
     };
   },
   methods: {
+    //push
     order() {
       this.$router.push("/users/step4");
     },
+    // 得到當下時間
+    timeFormate(timeStamp) {
+      let newdate = new Date(timeStamp);
+      // let week = ["日", "一", "二", "三", "四", "五", "六"];
+
+      let year = newdate.getFullYear();
+      let month =
+        newdate.getMonth() + 1 < 10
+          ? "0" + (newdate.getMonth() + 1)
+          : newdate.getMonth() + 1;
+      let date =
+        newdate.getDate() < 10 ? "0" + newdate.getDate() : newdate.getDate();
+      let hh =
+        newdate.getHours() < 10 ? "0" + newdate.getHours() : newdate.getHours();
+      let mm =
+        newdate.getMinutes() < 10
+          ? "0" + newdate.getMinutes()
+          : newdate.getMinutes();
+      let ss =
+        newdate.getSeconds() < 10
+          ? "0" + newdate.getSeconds()
+          : newdate.getSeconds();
+
+      this.nowTime = hh + ":" + mm + ":" + ss;
+      this.nowDay = year + "年" + month + "月" + date + "日";
+    },
+    // 定時器函數
+    nowTimes() {
+      let self = this;
+      self.timeFormate(new Date());
+      setInterval(function () {
+        self.timeFormate(new Date());
+      }, 1000);
+    },
+  },
+  // 創建完成時
+  created() {
+    this.nowTimes();
+  },
+  // 掛載完成時
+  mounted() {
+    this.nowTimes();
   },
 };
 </script>
@@ -27,72 +70,32 @@ export default {
       <el-step title="步驟 7 離院" icon="el-icon-picture"></el-step>
     </el-steps>
     <h1>至各診間候診</h1>
+    <h5>{{ nowDay }}</h5>
+    <h5>{{ nowTime }}</h5>
     <!-- 看診資訊 -->
-    <div class="container-fluid" id="content">
-      <h1 class="text-center text-Light">看診資訊</h1>
-      <div class="container col-md-6">
-        <!-- 內容 -->
-        <div class="col-12">
-          <div class="card-group">
-            <div class="card border-info text-center">
-              <div class="card-header">您的掛號號碼:</div>
-              <div class="card-body">
-                <h5 class="card-title">100</h5>
-              </div>
-            </div>
-            <div class="card border-info text-center">
-              <div class="card-header">目前看診號碼:</div>
-              <div class="card-body">
-                <h5 class="card-title">95</h5>
-              </div>
-            </div>
-            <div class="card border-info text-center">
-              <div class="card-header">目前看診號碼:</div>
-              <div class="card-body">
-                <h5 class="card-title">95</h5>
-              </div>
-            </div>
-            <div class="card border-info text-center">
-              <div class="card-header">預計等候時間:</div>
-              <div class="card-body">
-                <h5 class="card-title">50分鐘</h5>
-              </div>
-            </div>
+    <div class="container d-flex justify-content-center">
+      <div class="login-box" style="width: 400px">
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="" required="" />
+            <label>Username</label>
           </div>
-          <!-- --------------------看診完畢---------------------- -->
-          <el-row>
-            <el-col :span="24">
-              <el-card :body-style="{ padding: '0px' }">
-                <img
-                  src="https://802.mnd.gov.tw/zcommon03/images/TrafficMap01.jpg"
-                  class="image"
-                />
-                <div style="padding: 14px">
-                  <span>醫療大樓</span>
-                  <div class="bottom">
-                    <el-row :gutter="20">
-                      <el-col :span="12">
-                        <time class="time">{{ currentDate }}</time>
-                      </el-col>
-                      <el-col :span="6" offset="6">
-                        <el-button type="primary ml-1" @click="order"
-                          >下一步</el-button
-                        >
-                      </el-col>
-                    </el-row>
-                  </div>
-                </div>
-              </el-card>
-            </el-col>
-          </el-row>
-        </div>
-        <!-- --------回首頁----------- -->
+          <div class="user-box">
+            <input type="password" name="" required="" />
+            <label>Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
       </div>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-#step3 {
-}
-</style>
+<style lang="scss" src="@/assets/scss/step3.scss" scoped></style>
