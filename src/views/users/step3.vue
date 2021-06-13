@@ -85,7 +85,7 @@ export default {
             <input type="password" name="" required="" />
             <label>Password</label>
           </div>
-          <a href="#">
+          <a @click="order()" href="#">
             <span></span>
             <span></span>
             <span></span>
