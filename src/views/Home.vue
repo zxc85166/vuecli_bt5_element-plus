@@ -5,12 +5,15 @@ export default {
   data() {
     return {};
   },
-  methods() {
-    $(function () {
+  mounted: function () {
+    this.rightnow(); //載入觸發
+  },
+  methods: {
+    rightnow() {
       setTimeout(() => {
         $(".text-animation").removeClass("hidden");
       }, 500);
-    });
+    },
   },
 };
 </script>

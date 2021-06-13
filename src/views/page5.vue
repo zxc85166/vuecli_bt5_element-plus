@@ -97,5 +97,50 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import $ from "jquery";
+export default {
+  data() {
+    return {
+      className: "",
+      newName: {
+        user: "",
+        region: "",
+      },
+    };
+  },
+  methods: {
+    //push
+    order() {
+      this.$router.push("/users/step2");
+    },
+    mounted: function () {
+      this.rightnow(); //載入觸發
+    },
+    methods: {
+      rightnow() {
+        $("#datepicker").datepicker().click($("#backToHospital").text("SSSSS"));
+
+        $("#table1 tbody tr").click(function () {
+          $("img").hide();
+          $("img").show();
+        });
+
+        $("#table1 tbody tr").hover(
+          function () {
+            $(this).css({
+              "font-weight": "bold",
+            });
+          },
+          function () {
+            $(this).css({
+              "font-weight": "",
+            });
+          }
+        );
+      },
+    },
+  },
+};
+</script>
 <style lang="scss" scoped></style>
