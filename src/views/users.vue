@@ -5,17 +5,16 @@ export default {
 </script>
 <template>
   <div id="users">
-    <nav class="flex justify-items-start">
-      <router-link to="/users/step1">步驟 1</router-link>
-      <router-link to="/users/step2">步驟 2</router-link>
-      <router-link to="/users/step3">步驟 3</router-link>
-      <router-link to="/users/step4">步驟 4</router-link>
-      <router-link to="/users/step5">步驟 5</router-link>
-      <router-link to="/users/step6">步驟 6</router-link>
-      <router-link to="/users/step7">步驟 7</router-link>
-    </nav>
     <main>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition
+          enter-active-class="animate__animated animate__fadeInLeft"
+          leave-active-class="animate__animated animate__fadeOutLeft"
+          mode="out-in"
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
   </div>
 </template>

@@ -12,14 +12,40 @@ export default {
       ],
       url2: "https://images.pexels.com/photos/207601/pexels-photo-207601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       srcList2: [
-        "https://pbs.twimg.com/media/E31ShxCVEAkVGHW?format=png&name=small",
+        "https://pbs.twimg.com/media/E32U48hVgAEbuHy?format=png&name=medium",
         "https://images.pexels.com/photos/207601/pexels-photo-207601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
+      url3: "https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList3: [
+        "https://pbs.twimg.com/media/E32VTVMVIAU81w3?format=jpg&name=small",
+        "https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
+      url4: "https://images.pexels.com/photos/1164531/pexels-photo-1164531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList4: [
+        "https://pbs.twimg.com/media/E32VTVMVIAU81w3?format=jpg&name=small",
+        "https://images.pexels.com/photos/1164531/pexels-photo-1164531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
+      url5: "https://images.pexels.com/photos/4269273/pexels-photo-4269273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList5: [
+        "https://pbs.twimg.com/media/E32VTVMVIAU81w3?format=jpg&name=small",
+        "https://images.pexels.com/photos/4269273/pexels-photo-4269273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
+      url6: "https://images.pexels.com/photos/4021808/pexels-photo-4021808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList6: [
+        "https://pbs.twimg.com/media/E32VTVMVIAU81w3?format=jpg&name=small",
+        "https://images.pexels.com/photos/4021808/pexels-photo-4021808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
+      url7: "https://images.pexels.com/photos/451/red-school-blur-factory.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList7: [
+        "https://pbs.twimg.com/media/E32VTVMVIAU81w3?format=jpg&name=small",
+        "https://images.pexels.com/photos/451/red-school-blur-factory.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       ],
     };
   },
+
   methods: {
     //push
-    order() {
+    linkStep1() {
       this.$router.push("/users/step1");
     },
   },
@@ -68,8 +94,8 @@ export default {
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"
-                  :src="url2"
-                  :preview-src-list="srcList2"
+                  :src="url3"
+                  :preview-src-list="srcList3"
                 >
                 </el-image>
               </div>
@@ -82,8 +108,8 @@ export default {
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"
-                  :src="url2"
-                  :preview-src-list="srcList2"
+                  :src="url4"
+                  :preview-src-list="srcList4"
                 >
                 </el-image>
               </div>
@@ -96,8 +122,8 @@ export default {
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"
-                  :src="url2"
-                  :preview-src-list="srcList2"
+                  :src="url5"
+                  :preview-src-list="srcList5"
                 >
                 </el-image>
               </div>
@@ -110,8 +136,8 @@ export default {
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"
-                  :src="url2"
-                  :preview-src-list="srcList2"
+                  :src="url6"
+                  :preview-src-list="srcList6"
                 >
                 </el-image>
               </div>
@@ -124,8 +150,8 @@ export default {
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"
-                  :src="url2"
-                  :preview-src-list="srcList2"
+                  :src="url7"
+                  :preview-src-list="srcList7"
                 >
                 </el-image>
               </div>
@@ -135,7 +161,9 @@ export default {
       </div>
     </div>
   </div>
-  <el-button @click="order" type="primary" plain>主要按钮</el-button>
+  <el-button @click="linkStep1" type="primary" plain class="ms-5"
+    >開始看診</el-button
+  >
 </template>
 
 <style lang="scss" scoped>
