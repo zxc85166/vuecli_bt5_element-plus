@@ -52,12 +52,14 @@ export default {
       <el-step title="步驟 7 離院" icon="el-icon-picture"></el-step>
     </el-steps>
     <h1 class="text-center text-Light">填寫初診單</h1>
-    <h1 class="text-center text-Light">{{ form.name }}</h1>
     <div class="container d-flex justify-content-center">
       <!-- form -->
       <div class="login-box">
         <el-form ref="form" :model="form" label-width="80px">
-          <div class="container p-5 border radius" style="border-radius: 4px">
+          <div
+            class="container px-5 pt-4 border radius"
+            style="border-radius: 4px"
+          >
             <!-- /////// -->
             <el-upload action="#" list-type="picture-card" :auto-upload="false">
               <template #default>
@@ -80,14 +82,13 @@ export default {
             <el-dialog v-model="dialogVisible">
               <img width="100%" :src="dialogImageUrl" alt="" />
             </el-dialog>
-            <div class="user-box text-center">
-              <input type="text" name="" required="" />
-              <label>上傳圖片：顯示比例長寬比 1:1</label>
-            </div>
-            <el-form-item label="姓名">
-              <el-input v-model="form.name" clearable></el-input>
-            </el-form-item>
 
+            <label>上傳圖片：顯示比例長寬比 1:1</label>
+            <div class="pt-5">
+              <el-form-item label="姓名">
+                <el-input v-model="form.name" clearable></el-input>
+              </el-form-item>
+            </div>
             <el-form-item label="住家地址">
               <el-input v-model="form.address" clearable></el-input>
             </el-form-item>
@@ -136,13 +137,12 @@ export default {
               <el-input type="textarea" v-model="form.desc"></el-input>
             </el-form-item>
             <el-form-item>
-              <el-button class="custom-btn btn-8" type="primary" @click="order">
-                確認送出
-              </el-button>
+              <el-button type="primary" @click="order"> 確認送出 </el-button>
             </el-form-item>
           </div>
         </el-form>
       </div>
+
       <!-- form -->
     </div>
   </div>

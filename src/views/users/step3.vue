@@ -1,59 +1,15 @@
 <script>
+import nowDay from "@/components/nowDay.vue";
 export default {
-  components: {},
+  components: { nowDay },
   data() {
-    return {
-      nowDay: "",
-      nowTime: "",
-    };
+    return {};
   },
   methods: {
     //push
     order() {
       this.$router.push("/users/step4");
     },
-    // 得到當下時間
-    timeFormate(timeStamp) {
-      let newdate = new Date(timeStamp);
-      // let week = ["日", "一", "二", "三", "四", "五", "六"];
-
-      let year = newdate.getFullYear();
-      let month =
-        newdate.getMonth() + 1 < 10
-          ? "0" + (newdate.getMonth() + 1)
-          : newdate.getMonth() + 1;
-      let date =
-        newdate.getDate() < 10 ? "0" + newdate.getDate() : newdate.getDate();
-      let hh =
-        newdate.getHours() < 10 ? "0" + newdate.getHours() : newdate.getHours();
-      let mm =
-        newdate.getMinutes() < 10
-          ? "0" + newdate.getMinutes()
-          : newdate.getMinutes();
-      let ss =
-        newdate.getSeconds() < 10
-          ? "0" + newdate.getSeconds()
-          : newdate.getSeconds();
-
-      this.nowTime = hh + ":" + mm + ":" + ss;
-      this.nowDay = year + "年" + month + "月" + date + "日";
-    },
-    // 定時器函數
-    nowTimes() {
-      let self = this;
-      self.timeFormate(new Date());
-      setInterval(function () {
-        self.timeFormate(new Date());
-      }, 1000);
-    },
-  },
-  // 創建完成時
-  created() {
-    this.nowTimes();
-  },
-  // 掛載完成時
-  mounted() {
-    this.nowTimes();
   },
 };
 </script>
@@ -69,33 +25,109 @@ export default {
       <el-step title="步驟 6 藥局領藥" icon="el-icon-picture"></el-step>
       <el-step title="步驟 7 離院" icon="el-icon-picture"></el-step>
     </el-steps>
-    <h1>至各診間候診</h1>
-    <h5>{{ nowDay }}</h5>
-    <h5>{{ nowTime }}</h5>
+
     <!-- 看診資訊 -->
-    <div class="container d-flex justify-content-center">
-      <div class="login-box" style="width: 400px">
-        <h2>Login</h2>
-        <form>
-          <div class="user-box">
-            <input type="text" name="" required="" />
-            <label>Username</label>
+    <!-- service_area  -->
+    <div class="service_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="section_title text-center mb-65">
+              <span>至各診間候診</span>
+              <h3>
+                至各診間候診 <br />
+                <nowDay />
+              </h3>
+            </div>
           </div>
-          <div class="user-box">
-            <input type="password" name="" required="" />
-            <label>Password</label>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-md-4">
+            <div class="single_service text-center">
+              <div class="icon">
+                <img src="@/assets/svg_icon/1.svg" alt="" />
+              </div>
+              <h3>您的掛號號碼:</h3>
+              <p>100</p>
+            </div>
           </div>
-          <a @click="order()" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
-        </form>
+          <div class="col-xl-4 col-md-4">
+            <div class="single_service text-center">
+              <div class="icon">
+                <img src="@/assets/svg_icon/2.svg" alt="" />
+              </div>
+              <h3>目前看診號碼:</h3>
+              <p>95</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4">
+            <div class="single_service text-center">
+              <div class="icon">
+                <img src="@/assets/svg_icon/3.svg" alt="" />
+              </div>
+              <h3>預計等候時間:</h3>
+              <p>50分鐘</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <!--/ service_area  -->
+
+    <!-- 路線 -->
+    <div class="container border hovering px-1">
+      <el-collapse v-model="activeName" accordion>
+        <el-collapse-item title="大樓" name="1">
+          <div>
+            <img
+              src="https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
+              alt=""
+              class="img-sl"
+            />
+          </div>
+          <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
+            non.
+          </div>
+        </el-collapse-item>
+        <el-collapse-item title="A區" name="2">
+          <div>
+            <img
+              src="https://images.pexels.com/photos/7089013/pexels-photo-7089013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
+              alt=""
+              class="img-sl"
+            />
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quod!
+          </div>
+        </el-collapse-item>
+        <el-collapse-item title="707廳" name="3">
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            amet, nulla dicta sunt similique debitis libero magni illo doloribus
+            corrupti error rem ipsam aut deleniti quisquam fugiat itaque illum
+            cupiditate!
+          </div>
+          <div>
+            <img
+              src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
+              alt=""
+              class="img-sl"
+            />
+          </div>
+          <div>Lorem ipsum dolor sit amet.</div>
+        </el-collapse-item>
+        <el-collapse-item title="202室" name="4">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        </el-collapse-item>
+      </el-collapse>
     </div>
   </div>
 </template>
 
-<style lang="scss" src="@/assets/scss/step3.scss" scoped></style>
+<style lang="scss" src="@/assets/scss/step3.scss" scoped>
+#step3 {
+}
+</style>

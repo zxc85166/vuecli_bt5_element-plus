@@ -1,5 +1,4 @@
 <script>
-import $ from "jquery";
 export default {
   data() {
     return {
@@ -14,10 +13,6 @@ export default {
     //push
     order() {
       this.$router.push("/users/step2");
-    },
-    changecolor() {
-      $("body").removeClass();
-      $("body").addClass(this.className);
     },
   },
 };
@@ -57,17 +52,6 @@ export default {
       </el-form-item>
     </el-form>
     <!-- 輸入姓名 -->
-    <div class="row">
-      <div class="clo-4">
-        <input type="text" class="form-control" v-model="className" />
-      </div>
-      <div class="clo-4">
-        <button class="btn btn-primary form-control" @click="changecolor">
-          更換body顏色
-        </button>
-      </div>
-      <p>(例：bg-dark、bg-secondary、bg-success、bg-danger、bg-warning)</p>
-    </div>
   </div>
 </template>
 

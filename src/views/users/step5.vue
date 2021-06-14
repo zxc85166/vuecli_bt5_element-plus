@@ -1,5 +1,9 @@
 <script>
+import nowDay from "@/components/nowDay.vue";
+
 export default {
+  components: { nowDay },
+
   data() {
     return {
       currentDate: new Date(),
@@ -24,73 +28,104 @@ export default {
       <el-step title="步驟 6 藥局領藥" icon="el-icon-picture"></el-step>
       <el-step title="步驟 7 離院" icon="el-icon-picture"></el-step>
     </el-steps>
-    <h1>櫃台批價</h1>
-    <!-- 看診資訊 -->
-    <div class="container-fluid" id="content">
-      <h1 class="text-center text-Light">看診資訊</h1>
-      <div class="container col-md-6">
-        <!-- 內容 -->
-        <div class="col-12">
-          <div class="card-group">
-            <div class="card border-info text-center">
-              <div class="card-header">您的掛號號碼:</div>
-              <div class="card-body">
-                <h5 class="card-title">101</h5>
-              </div>
-            </div>
-            <div class="card border-info text-center">
-              <div class="card-header">目前看診號碼:</div>
-              <div class="card-body">
-                <h5 class="card-title">95</h5>
-              </div>
-            </div>
-            <div class="card border-info text-center">
-              <div class="card-header">目前看診號碼:</div>
-              <div class="card-body">
-                <h5 class="card-title">95</h5>
-              </div>
-            </div>
-            <div class="card border-info text-center">
-              <div class="card-header">預計等候時間:</div>
-              <div class="card-body">
-                <h5 class="card-title">50分鐘</h5>
-              </div>
+
+    <!-- service_area  -->
+    <div class="service_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="section_title text-center mb-65">
+              <span>至各診間候診</span>
+              <h3>
+                櫃台批價 <br />
+                <nowDay />
+              </h3>
             </div>
           </div>
-          <!-- --------------------看診完畢---------------------- -->
-          <el-row>
-            <el-col :span="24">
-              <el-card :body-style="{ padding: '0px' }">
-                <img
-                  src="https://802.mnd.gov.tw/zcommon03/images/TrafficMap01.jpg"
-                  class="image"
-                />
-                <div style="padding: 14px">
-                  <span>醫療大樓</span>
-                  <div class="bottom">
-                    <el-row :gutter="20">
-                      <el-col :span="12">
-                        <time class="time">{{ currentDate }}</time>
-                      </el-col>
-                      <el-col :span="6" offset="6">
-                        <el-button type="primary ml-1" @click="order"
-                          >下一步</el-button
-                        >
-                      </el-col>
-                    </el-row>
-                  </div>
-                </div>
-              </el-card>
-            </el-col>
-          </el-row>
         </div>
-        <!-- --------回首頁----------- -->
+        <div class="row">
+          <div class="col-xl-4 col-md-4">
+            <div class="single_service text-center">
+              <div class="icon">
+                <img src="@/assets/svg_icon/1.svg" alt="" />
+              </div>
+              <h3>您的掛號號碼:</h3>
+              <p>100</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4">
+            <div class="single_service text-center">
+              <div class="icon">
+                <img src="@/assets/svg_icon/2.svg" alt="" />
+              </div>
+              <h3>目前看診號碼:</h3>
+              <p>95</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4">
+            <div class="single_service text-center">
+              <div class="icon">
+                <img src="@/assets/svg_icon/3.svg" alt="" />
+              </div>
+              <h3>預計等候時間:</h3>
+              <p>50分鐘</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <!--/ service_area  -->
+    <!-- 路線 -->
+    <div class="container border hovering px-1">
+      <el-collapse v-model="activeName" accordion>
+        <el-collapse-item title="大樓" name="1">
+          <div>
+            <img
+              src="https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
+              alt=""
+              class="img-sl"
+            />
+          </div>
+          <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
+            non.
+          </div>
+        </el-collapse-item>
+        <el-collapse-item title="A區" name="2">
+          <div>
+            <img
+              src="https://images.pexels.com/photos/7089013/pexels-photo-7089013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
+              alt=""
+              class="img-sl"
+            />
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quod!
+          </div>
+        </el-collapse-item>
+        <el-collapse-item title="707廳" name="3">
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            amet, nulla dicta sunt similique debitis libero magni illo doloribus
+            corrupti error rem ipsam aut deleniti quisquam fugiat itaque illum
+            cupiditate!
+          </div>
+          <div>
+            <img
+              src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
+              alt=""
+              class="img-sl"
+            />
+          </div>
+          <div>Lorem ipsum dolor sit amet.</div>
+        </el-collapse-item>
+        <el-collapse-item title="202室" name="4">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        </el-collapse-item>
+      </el-collapse>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-#step5 {
-}
-</style>
+<style lang="scss" src="@/assets/scss/step3.scss" scoped></style>
