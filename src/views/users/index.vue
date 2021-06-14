@@ -1,61 +1,147 @@
 <script>
+//VueScrollTo套件
+
 export default {
   data() {
     return {
-      className: "",
-      newName: {
-        user: "",
-        region: "",
-      },
+      // 圖片
+      url: "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList: [
+        "https://pbs.twimg.com/media/E31ShxCVEAkVGHW?format=png&name=small",
+        "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
+      url2: "https://images.pexels.com/photos/207601/pexels-photo-207601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      srcList2: [
+        "https://pbs.twimg.com/media/E31ShxCVEAkVGHW?format=png&name=small",
+        "https://images.pexels.com/photos/207601/pexels-photo-207601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ],
     };
   },
   methods: {
     //push
     order() {
-      this.$router.push("/users/step2");
+      this.$router.push("/users/step1");
     },
   },
 };
 </script>
-
 <template>
   <div id="index">
-    <el-steps :active="0" simple>
-      <el-step title="步驟 1 網路掛號" icon="el-icon-edit"></el-step>
-      <el-step title="步驟 2 填寫初診單" icon="el-icon-upload"></el-step>
-      <el-step title="步驟 3 至各診間候診" icon="el-icon-picture"></el-step>
-      <el-step title="步驟 4 檢查、抽血檢驗" icon="el-icon-picture"></el-step>
-      <el-step title="步驟 5 櫃台批價" icon="el-icon-picture"></el-step>
-      <el-step title="步驟 6 藥局領藥" icon="el-icon-picture"></el-step>
-      <el-step title="步驟 7 離院" icon="el-icon-picture"></el-step>
-    </el-steps>
-    <h1>網路掛號</h1>
+    <!-- 時間軸 -->
+    <div class="container mx-auto px-5 pt-4">
+      <h1>流程</h1>
 
-    <!-- 輸入姓名 -->
-    <el-form :inline="true" :model="newName" class="demo-form-inline">
-      <el-form-item label="身分證 / 居留證號碼 / 病歷號碼：">
-        <el-input v-model="newName.user" placeholder="輸入"></el-input>
-      </el-form-item>
-      <el-form-item label="看診方式：">
-        <el-select v-model="newName.region" placeholder="請選擇">
-          <el-option label="到院看診" value="123"></el-option>
-          <el-option label="電話看診" value="456"></el-option>
-        </el-select>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" icon="el-icon-search" @click="order"
-          >初診</el-button
-        >
-        <el-button type="primary" @click="order"
-          >複診<i class="el-icon-s-claim el-icon--right"></i
-        ></el-button>
-      </el-form-item>
-    </el-form>
-    <!-- 輸入姓名 -->
+      <div class="block">
+        <el-timeline>
+          <el-timeline-item timestamp="步驟1" placement="top">
+            <el-card>
+              <h4>網路掛號</h4>
+              <p>身分證 / 居留證號碼 / 病歷號碼 與 看診方式</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url"
+                  :preview-src-list="srcList"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item timestamp="步驟2" placement="top">
+            <el-card>
+              <h4>填寫資料</h4>
+              <p>填寫初診單</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url2"
+                  :preview-src-list="srcList2"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item timestamp="步驟3" placement="top">
+            <el-card>
+              <h4>至各診間候診</h4>
+              <p>您的掛號號碼、目前看診號碼、預計等候時間</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url2"
+                  :preview-src-list="srcList2"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item timestamp="步驟4" placement="top">
+            <el-card>
+              <h4>檢查</h4>
+              <p>檢查、抽血檢驗</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url2"
+                  :preview-src-list="srcList2"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item timestamp="步驟5" placement="top">
+            <el-card>
+              <h4>批價</h4>
+              <p>櫃台批價</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url2"
+                  :preview-src-list="srcList2"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item timestamp="步驟6" placement="top">
+            <el-card>
+              <h4>領藥</h4>
+              <p>藥局領藥</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url2"
+                  :preview-src-list="srcList2"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item timestamp="步驟7" placement="top">
+            <el-card>
+              <h4>手續完成</h4>
+              <p>離院</p>
+              <div class="demo-image__preview">
+                <el-image
+                  style="width: 100px; height: 100px"
+                  :src="url2"
+                  :preview-src-list="srcList2"
+                >
+                </el-image>
+              </div>
+            </el-card>
+          </el-timeline-item>
+        </el-timeline>
+      </div>
+    </div>
   </div>
+  <el-button @click="order" type="primary" plain>主要按钮</el-button>
 </template>
 
 <style lang="scss" scoped>
 #index {
+  h1 {
+    padding-left: 5%;
+  }
 }
 </style>

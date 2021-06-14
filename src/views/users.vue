@@ -6,7 +6,7 @@ export default {
 <template>
   <div id="users">
     <nav class="flex justify-items-start">
-      <router-link to="/users/index">步驟 1</router-link>
+      <router-link to="/users/step1">步驟 1</router-link>
       <router-link to="/users/step2">步驟 2</router-link>
       <router-link to="/users/step3">步驟 3</router-link>
       <router-link to="/users/step4">步驟 4</router-link>

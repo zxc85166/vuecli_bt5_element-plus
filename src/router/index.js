@@ -38,6 +38,11 @@ const routes = [
         component: () => import("@/views/users/index"),
       },
       {
+        path: "/users/step1",
+        name: "step1",
+        component: () => import("@/views/users/step1"),
+      },
+      {
         path: "/users/step2",
         name: "step2",
         component: () => import("@/views/users/step2"),
