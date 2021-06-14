@@ -10,7 +10,7 @@ export default {
     };
   },
   mounted() {
-    this.number += 20;
+    this.number += 80;
   },
   computed: {
     animatedNumber() {
@@ -119,7 +119,6 @@ export default {
                 <img src="@/assets/svg_icon/1.svg" alt="" />
               </div>
               <h3>您的掛號號碼:</h3>
-              <input v-model.number="number" type="number" step="20" />
               <p>{{ animatedNumber }}</p>
             </div>
           </div>
@@ -129,7 +128,7 @@ export default {
                 <img src="@/assets/svg_icon/2.svg" alt="" />
               </div>
               <h3>目前看診號碼:</h3>
-              <p>95</p>
+              <p>{{ animatedNumber }}</p>
             </div>
           </div>
           <div class="col-xl-4 col-md-4">
@@ -138,7 +137,7 @@ export default {
                 <img src="@/assets/svg_icon/3.svg" alt="" />
               </div>
               <h3>預計等候時間:</h3>
-              <p>50分鐘</p>
+              <p>{{ animatedNumber }}分鐘</p>
             </div>
           </div>
         </div>

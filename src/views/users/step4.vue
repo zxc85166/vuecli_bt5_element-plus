@@ -1,12 +1,27 @@
 <script>
 import nowDay from "@/components/nowDay.vue";
+import gsap from "gsap";
+
 export default {
   components: { nowDay },
-
   data() {
     return {
-      currentDate: new Date(),
+      number: 0,
+      tweenedNumber: 0,
     };
+  },
+  mounted() {
+    this.number += 100;
+  },
+  computed: {
+    animatedNumber() {
+      return this.tweenedNumber.toFixed(0);
+    },
+  },
+  watch: {
+    number(newValue) {
+      gsap.to(this.$data, { duration: 0.5, tweenedNumber: newValue });
+    },
   },
   methods: {
     //push
@@ -104,7 +119,7 @@ export default {
                 <img src="@/assets/svg_icon/1.svg" alt="" />
               </div>
               <h3>您的掛號號碼:</h3>
-              <p>100</p>
+              <p>{{ animatedNumber }}</p>
             </div>
           </div>
           <div class="col-xl-4 col-md-4">
@@ -113,7 +128,7 @@ export default {
                 <img src="@/assets/svg_icon/2.svg" alt="" />
               </div>
               <h3>目前看診號碼:</h3>
-              <p>95</p>
+              <p>{{ animatedNumber }}</p>
             </div>
           </div>
           <div class="col-xl-4 col-md-4">
@@ -122,7 +137,7 @@ export default {
                 <img src="@/assets/svg_icon/3.svg" alt="" />
               </div>
               <h3>預計等候時間:</h3>
-              <p>50分鐘</p>
+              <p>{{ animatedNumber }}分鐘</p>
             </div>
           </div>
         </div>
@@ -179,6 +194,7 @@ export default {
         </el-collapse-item>
       </el-collapse>
     </div>
+    <el-button type="primary" @click="linkStep5"> 確認送出 </el-button>
   </div>
 </template>
 

@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-  <div id="index animate__animated animate__fadeInBottomLeft">
+  <div id="index" class="animate__animated animate__fadeInBottomRight">
     <!-- Jumbotron -->
     <header class="d-flex justify-content-center align-items-center">
       <div class="text-center">
@@ -87,7 +87,6 @@ export default {
     </header>
 
     <h1 class="pt-5 py-3">網路掛號</h1>
-
     <!-- 輸入姓名 -->
     <el-form :inline="true" :model="newName" class="demo-form-inline">
       <el-form-item label="身分證 / 居留證號碼 / 病歷號碼：">
