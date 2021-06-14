@@ -1,12 +1,28 @@
 <script>
+import gsap from "gsap";
 import nowDay from "@/components/nowDay.vue";
 export default {
   components: { nowDay },
   data() {
-    return {};
+    return {
+      number: 0,
+      tweenedNumber: 0,
+    };
+  },
+  mounted() {
+    this.number += 20;
+  },
+  computed: {
+    animatedNumber() {
+      return this.tweenedNumber.toFixed(0);
+    },
+  },
+  watch: {
+    number(newValue) {
+      gsap.to(this.$data, { duration: 0.5, tweenedNumber: newValue });
+    },
   },
   methods: {
-    //push
     //push
     linkStep1() {
       this.$router.push("/users/step1");
@@ -103,7 +119,8 @@ export default {
                 <img src="@/assets/svg_icon/1.svg" alt="" />
               </div>
               <h3>您的掛號號碼:</h3>
-              <p>100</p>
+              <input v-model.number="number" type="number" step="20" />
+              <p>{{ animatedNumber }}</p>
             </div>
           </div>
           <div class="col-xl-4 col-md-4">
@@ -140,7 +157,7 @@ export default {
               class="img-sl"
             />
           </div>
-          <div @mouseover="showimg()">
+          <div>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
             non.
           </div>
