@@ -10,6 +10,7 @@ export default {
       },
     };
   },
+
   methods: {
     //push
     linkStep1() {
@@ -32,6 +33,9 @@ export default {
     },
     linkStep7() {
       this.$router.push("/users/step7");
+    },
+    linkPage4() {
+      this.$router.push("/page4");
     },
   },
 };
@@ -99,7 +103,7 @@ export default {
         </el-select>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" icon="el-icon-search" @click="linkStep2"
+        <el-button type="primary" icon="el-icon-search" @click="linkPage4"
           >初診</el-button
         >
         <el-button type="primary" @click="linkStep3"

@@ -98,7 +98,8 @@
 </template>
 
 <script>
-import $ from "jquery";
+// import { ref, onMounted } from "vue";
+import { page5 } from "@/assets/js/page5.js";
 export default {
   data() {
     return {
@@ -114,33 +115,15 @@ export default {
     order() {
       this.$router.push("/users/step2");
     },
-    mounted: function () {
-      this.rightnow(); //載入觸發
+    mounted() {
+      page5();
     },
-    methods: {
-      rightnow() {
-        $("#datepicker").datepicker().click($("#backToHospital").text("SSSSS"));
-
-        $("#table1 tbody tr").click(function () {
-          $("img").hide();
-          $("img").show();
-        });
-
-        $("#table1 tbody tr").hover(
-          function () {
-            $(this).css({
-              "font-weight": "bold",
-            });
-          },
-          function () {
-            $(this).css({
-              "font-weight": "",
-            });
-          }
-        );
-      },
-    },
+    methods: {},
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#table1 tbody tr:hover {
+  font-weight: "bold";
+}
+</style>
