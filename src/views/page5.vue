@@ -21,7 +21,12 @@
       <div class="row py-2">
         <div class="col-md-4 py-2">
           <label class="form-label">就醫日期</label>
-          <input type="text" class="form-control" id="datepicker" />
+          <el-date-picker
+            v-model="value1"
+            type="date"
+            placeholder="選擇日期"
+            style="width: 100%"
+          ></el-date-picker>
         </div>
         <div class="col-md-4 py-2">
           <label class="form-label">提醒回診日期</label>
@@ -109,11 +114,14 @@
 </template>
 
 <script>
-import $ from "jquery";
 // import { ref, onMounted } from "vue";
 export default {
   data() {
     return {
+      disabledDate(time) {
+        return time.getTime() > Date.now();
+      },
+      value1: "",
       className: "",
       newName: {
         user: "",
@@ -121,39 +129,19 @@ export default {
       },
     };
   },
-  mounted: function () {
-    this.rightnow(); //載入觸發
-  },
+
   methods: {
     //push
     order() {
       this.$router.push("/users/step2");
     },
 
-    rightnow() {
-      $("#datepicker").datepicker({
-        dateFormat: "yy/mm/dd",
-      });
-
-      $("#table1 tbody tr").hover(
-        function () {
-          $(this).css({
-            "font-weight": "bold",
-          });
-        },
-        function () {
-          $(this).css({
-            "font-weight": "",
-          });
-        }
-      );
-    },
     methods: {},
   },
 };
 </script>
 <style lang="scss" scoped>
-#table1 tbody tr:hover {
+#table1 tbody ::v-deep tr:hover {
   font-weight: "bold";
 }
 </style>
