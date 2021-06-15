@@ -16,19 +16,26 @@
     </header>
 
     <section class="py-5">
-      <div class="container d-flex justify-content-center">
-        <div class="row">
-          <div class="col-md-12">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
             <h3 class="mb-3 d-flex justify-content-center">我該看哪一科</h3>
-            <form class="d-flex">
+
+            <div class="d-flex mb-5">
               <input
-                type="text"
-                id="keyword"
-                name="keyword"
-                aria-label="Search"
-                class="form-control mr-sm-2"
-                placeholder="請輸入關鍵字"
+                class="form-control"
+                list="datalistOptions"
+                id="exampleDataList"
+                placeholder="請輸入症狀關鍵字"
               />
+              <datalist id="datalistOptions">
+                <option value="頭痛"></option>
+                <option value="頭暈"></option>
+                <option value="痠痛"></option>
+                <option value="腹瀉"></option>
+                <option value="腹痛"></option>
+              </datalist>
+
               <button
                 style="margin-left: 0.5em"
                 class="
@@ -40,8 +47,120 @@
               >
                 Search
               </button>
-            </form>
+            </div>
+
+            <div class="row text-center">
+              <div class="col-md-6 d-flex">
+                <h3 class="h5">建議科別:</h3>
+                <h5 class="ps-3">科別1、科別2、科別3</h5>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseOne"
+                      aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseOne"
+                    >
+                      科別1
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne"
+                  >
+                    <div class="accordion-body">
+                      <strong>科別介紹</strong> It is shown by default, until
+                      the collapse plugin adds the appropriate classes that we
+                      use to style each element. These classes control the
+                      overall appearance, as well as the showing and hiding via
+                      CSS transitions. You can modify any of this with custom
+                      CSS or overriding our default variables. It's also worth
+                      noting that just about any HTML can go within the
+                      <code>.accordion-body</code>, though the transition does
+                      limit overflow.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseTwo"
+                    >
+                      科別2
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo"
+                  >
+                    <div class="accordion-body">
+                      <strong
+                        >科別介紹This is the second item's accordion
+                        body.</strong
+                      >
+                      It is hidden by default, until the collapse plugin adds
+                      the appropriate classes that we use to style each element.
+                      These classes control the overall appearance, as well as
+                      the showing and hiding via CSS transitions. You can modify
+                      any of this with custom CSS or overriding our default
+                      variables. It's also worth noting that just about any HTML
+                      can go within the <code>.accordion-body</code>, though the
+                      transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseThree"
+                    >
+                      科別3
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree"
+                  >
+                    <div class="accordion-body">
+                      <strong
+                        >科別介紹This is the third item's accordion
+                        body.</strong
+                      >
+                      It is hidden by default, until the collapse plugin adds
+                      the appropriate classes that we use to style each element.
+                      These classes control the overall appearance, as well as
+                      the showing and hiding via CSS transitions. You can modify
+                      any of this with custom CSS or overriding our default
+                      variables. It's also worth noting that just about any HTML
+                      can go within the <code>.accordion-body</code>, though the
+                      transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
           </div>
+          <!--col-md-8-->
         </div>
       </div>
     </section>
