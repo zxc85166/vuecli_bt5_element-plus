@@ -122,26 +122,8 @@ export default {
         return time.getTime() > Date.now();
       },
       value1: "",
-      className: "",
-      newName: {
-        user: "",
-        region: "",
-      },
     };
-  },
-
-  methods: {
-    //push
-    order() {
-      this.$router.push("/users/step2");
-    },
-
-    methods: {},
   },
 };
 </script>
-<style lang="scss" scoped>
-#table1 tbody ::v-deep tr:hover {
-  font-weight: "bold";
-}
-</style>
+<style lang="scss" scoped></style>

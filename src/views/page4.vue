@@ -94,7 +94,10 @@
             </div>
 
             <hr />
-            <button class="btn btn-success w-100 d-block btn-lg mb-4">
+            <button
+              @click="linkStep3"
+              class="btn btn-success w-100 d-block btn-lg mb-4"
+            >
               提交
             </button>
           </div>
@@ -723,7 +726,10 @@
               </div>
             </div>
             <hr />
-            <button class="btn btn-success w-100 d-block btn-lg mb-4">
+            <button
+              @click="linkStep3"
+              class="btn btn-success w-100 d-block btn-lg mb-4"
+            >
               提交
             </button>
           </div>
@@ -734,7 +740,23 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      disabledDate(time) {
+        return time.getTime() > Date.now();
+      },
+      value1: "",
+    };
+  },
+  methods: {
+    linkStep3() {
+      this.$router.push("/users/step3");
+    },
+  },
+};
+</script>
 <style lang="scss" scoped>
 .logo {
   width: 40px;
