@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-  <div id="index" class="animate__animated animate__fadeInBottomRight">
+  <div id="index" class="animate__animated animate__fadeInDown">
     <!-- Jumbotron -->
     <header class="d-flex justify-content-center align-items-center">
       <div class="text-center">
