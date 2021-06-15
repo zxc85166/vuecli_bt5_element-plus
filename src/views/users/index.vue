@@ -56,13 +56,12 @@ export default {
     <!-- 時間軸 -->
     <div class="container mx-auto px-5 pt-4">
       <h1>流程</h1>
-
       <div class="block">
         <el-timeline>
           <el-timeline-item timestamp="步驟1" placement="top">
             <el-card>
               <h4>網路掛號</h4>
-              <p>身分證 / 居留證號碼 / 病歷號碼 與 看診方式</p>
+              <p>填寫：身分證 / 居留證號碼 / 病歷號碼 以及 選擇看診方式</p>
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"

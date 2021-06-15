@@ -145,56 +145,22 @@ export default {
     </div>
     <!--/ service_area  -->
     <!-- 路線 -->
-    <div class="container border hovering px-1">
-      <el-collapse v-model="activeName" accordion>
-        <el-collapse-item title="大樓" name="1">
-          <div>
-            <img
-              src="https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
-              alt=""
-              class="img-sl"
-            />
-          </div>
-          <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
-            non.
-          </div>
-        </el-collapse-item>
-        <el-collapse-item title="A區" name="2">
-          <div>
-            <img
-              src="https://images.pexels.com/photos/7089013/pexels-photo-7089013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
-              alt=""
-              class="img-sl"
-            />
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quod!
-          </div>
-        </el-collapse-item>
-        <el-collapse-item title="707廳" name="3">
-          <div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            amet, nulla dicta sunt similique debitis libero magni illo doloribus
-            corrupti error rem ipsam aut deleniti quisquam fugiat itaque illum
-            cupiditate!
-          </div>
-          <div>
-            <img
-              src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=252"
-              alt=""
-              class="img-sl"
-            />
-          </div>
-          <div>Lorem ipsum dolor sit amet.</div>
-        </el-collapse-item>
-        <el-collapse-item title="202室" name="4">
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </el-collapse-item>
-      </el-collapse>
+    <!-- 路線 -->
+    <div class="container border p-0 m-auto">
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.3638702396634!2d120.32080681535908!3d22.67749453482639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05405c033b69%3A0x71c8d4bc04229402!2z6auY6ZuE6I2j5rCR5oC75Yy76Zmi!5e0!3m2!1szh-TW!2stw!4v1623722810565!5m2!1szh-TW!2stw"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
-    <el-button type="primary" @click="linkStep5"> 確認送出 </el-button>
+    <div class="py-5">
+      <el-button type="primary" @click="linkStep5"> 下一步 </el-button>
+    </div>
   </div>
 </template>
 

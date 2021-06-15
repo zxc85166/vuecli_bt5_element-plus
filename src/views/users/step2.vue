@@ -113,6 +113,7 @@ export default {
         d-flex
         justify-content-center
         animate__animated animate__fadeInBottomLeft
+        pb-4
       "
     >
       <!-- form -->
@@ -198,11 +199,11 @@ export default {
             <el-form-item label="其他事項">
               <el-input type="textarea" v-model="form.desc"></el-input>
             </el-form-item>
-            <el-form-item>
+            <div class="pb-4">
               <el-button type="primary" @click="linkStep3">
                 確認送出
               </el-button>
-            </el-form-item>
+            </div>
           </div>
         </el-form>
       </div>
