@@ -188,7 +188,8 @@ export default {
       </div>
     </div>
   </div>
-  <div class="mt-5">
+  <div class="py-5">
+    <br />
     <el-button @click="linkStep1" type="primary" plain class="ms-5 mt-5"
       >開始看診</el-button
     >
