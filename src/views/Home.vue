@@ -20,6 +20,9 @@ export default {
 
 <template>
   <div id="Home">
+    <a href="#" class="d-none d-md-block">
+      <div class="gotop"></div>
+    </a>
     <!-- section -->
     <section class="vh-100">
       <div class="container h-100">
@@ -319,6 +322,23 @@ export default {
 
   .gray {
     color: #646464;
+  }
+  .gotop {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    bottom: 20px;
+    background-color: #447a6a;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .gotop:before {
+    content: "^";
   }
 }
 </style>
