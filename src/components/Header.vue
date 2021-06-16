@@ -17,7 +17,7 @@ export default {
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" @click="order()"
+        <a class="navbar-brand pointer" @click="order()"
           ><img src="@/assets/images/logo_main.png" alt="" class="logo me-2" />
           醫院快速通關小幫手</a
         >
@@ -89,5 +89,8 @@ a:before {
 
 .logo {
   width: 40px;
+}
+.pointer {
+  cursor: pointer;
 }
 </style>
