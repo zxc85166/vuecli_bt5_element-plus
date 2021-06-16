@@ -5,6 +5,7 @@ export default {
 </script>
 <template>
   <div id="users">
+    <el-backtop></el-backtop>
     <main>
       <router-view />
     </main>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-backtop></el-backtop>
     <!-- Jumbotron -->
     <header class="d-flex justify-content-center align-items-center">
       <div class="text-center">

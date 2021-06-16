@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-backtop></el-backtop>
     <header class="d-flex justify-content-center align-items-center"></header>
     <section class="pt-4 pb-4">
       <div class="container py-2">

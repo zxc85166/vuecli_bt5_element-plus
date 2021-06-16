@@ -34,7 +34,6 @@ export default {
 </script>
 <template>
   <div id="step7">
-    <el-backtop></el-backtop>
     <!-- Jumbotron -->
     <header class="d-flex justify-content-center align-items-center">
       <div class="text-center">
