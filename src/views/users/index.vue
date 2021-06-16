@@ -188,9 +188,11 @@ export default {
       </div>
     </div>
   </div>
-  <el-button @click="linkStep1" type="primary" plain class="ms-5 mt-5"
-    >開始看診</el-button
-  >
+  <div class="mt-5">
+    <el-button @click="linkStep1" type="primary" plain class="ms-5 mt-5"
+      >開始看診</el-button
+    >
+  </div>
 </template>
 
 <style lang="scss" scoped>
