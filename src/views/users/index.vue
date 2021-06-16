@@ -51,7 +51,12 @@ export default {
       <h1>流程</h1>
       <div class="block">
         <el-timeline>
-          <el-timeline-item timestamp="步驟1" placement="top">
+          <el-timeline-item
+            timestamp="步驟1"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>網路掛號</h4>
               <p>填寫：身分證 / 居留證號碼 / 病歷號碼 以及 選擇看診方式</p>
@@ -65,7 +70,12 @@ export default {
               </div>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="步驟2" placement="top">
+          <el-timeline-item
+            timestamp="步驟2"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>填寫資料</h4>
               <p>填寫初診單</p>
@@ -79,7 +89,12 @@ export default {
               </div>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="步驟3" placement="top">
+          <el-timeline-item
+            timestamp="步驟3"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>至各診間候診</h4>
               <p>您的掛號號碼、目前看診號碼、預計等候時間</p>
@@ -93,7 +108,12 @@ export default {
               </div>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="步驟4" placement="top">
+          <el-timeline-item
+            timestamp="步驟4"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>檢查</h4>
               <p>檢查、抽血檢驗</p>
@@ -107,7 +127,12 @@ export default {
               </div>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="步驟5" placement="top">
+          <el-timeline-item
+            timestamp="步驟5"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>批價</h4>
               <p>櫃台批價</p>
@@ -121,7 +146,12 @@ export default {
               </div>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="步驟6" placement="top">
+          <el-timeline-item
+            timestamp="步驟6"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>領藥</h4>
               <p>藥局領藥</p>
@@ -135,7 +165,12 @@ export default {
               </div>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="步驟7" placement="top">
+          <el-timeline-item
+            timestamp="步驟7"
+            placement="top"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             <el-card>
               <h4>手續完成</h4>
               <p>離院</p>
@@ -153,7 +188,7 @@ export default {
       </div>
     </div>
   </div>
-  <el-button @click="linkStep1" type="primary" plain class="ms-5"
+  <el-button @click="linkStep1" type="primary" plain class="ms-5 mt-5"
     >開始看診</el-button
   >
 </template>

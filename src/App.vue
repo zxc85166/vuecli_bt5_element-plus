@@ -1,10 +1,17 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import AOS from "aos";
+import { onMounted } from "@vue/runtime-core";
 export default {
   components: {
     Header,
     Footer,
+  },
+  setup() {
+    onMounted(() => {
+      AOS.init();
+    });
   },
 };
 </script>
