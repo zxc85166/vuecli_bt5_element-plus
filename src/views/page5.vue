@@ -126,4 +126,10 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.table-hover {
+  > tbody > tr:hover {
+    font-weight: bold;
+  }
+}
+</style>
