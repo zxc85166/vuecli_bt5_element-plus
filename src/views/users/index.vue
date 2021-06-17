@@ -1,6 +1,4 @@
 <script>
-//VueScrollTo套件
-
 export default {
   data() {
     return {

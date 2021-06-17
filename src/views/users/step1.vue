@@ -1,5 +1,6 @@
 <script>
 export default {
+  components: {},
   data() {
     return {
       // 表格
