@@ -1,4 +1,6 @@
 <script>
+// import Home from "@/components/Home.vue";
+
 export default {
   components: {},
   data() {
@@ -92,6 +94,11 @@ export default {
     </header>
 
     <h1 class="pt-5 py-3">網路掛號</h1>
+    <div>
+      <h5 class="py-3">
+        歡迎~<strong>{{ $store.state.name }}</strong> 請填入資訊並選擇看診方式
+      </h5>
+    </div>
     <!-- 輸入姓名 -->
     <el-form :inline="true" :model="newName" class="demo-form-inline">
       <el-form-item label="身分證 / 居留證號碼 / 病歷號碼：">
@@ -118,7 +125,7 @@ export default {
 
 <style lang="scss" scoped>
 #index {
-  height: 70vh;
+  height: 700px;
   .alpha-50 {
     background: rgba(255, 255, 255, 0.5);
   }

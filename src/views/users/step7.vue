@@ -82,7 +82,8 @@ export default {
     </header>
     <h1 class="pt-5 py-3">準備離院</h1>
     <h3 class="pt-5 py-3 animate__animated animate__shakeY">
-      恭喜順利完成看診，可以準備出院囉~
+      恭喜<strong>{{ $store.state.name }}</strong>
+      先生/小姐 順利完成看診，可以準備出院囉~
     </h3>
     <div class="py-5">
       <el-button @click="show = !show">手續已辦妥</el-button>

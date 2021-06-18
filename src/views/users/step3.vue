@@ -106,6 +106,11 @@ export default {
             <div class="pt-5 py-3">
               <h1>
                 至各診間候診 <br />
+                <p></p>
+                <h5>
+                  <strong>{{ $store.state.name }}</strong> 先生/小姐
+                  請依據掛號號碼等候看診
+                </h5>
                 <nowDay />
               </h1>
             </div>

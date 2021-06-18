@@ -1,4 +1,6 @@
 <script>
+// import About from "@/components/About.vue";
+
 export default {
   components: {},
   data() {
@@ -107,6 +109,7 @@ export default {
       </div>
     </header>
     <h1 class="pt-5 py-3">填寫初診單</h1>
+
     <div
       class="
         container

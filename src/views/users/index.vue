@@ -1,5 +1,9 @@
 <script>
+import HelloWorld from "@/components/HelloWorld.vue";
 export default {
+  components: {
+    HelloWorld,
+  },
   data() {
     return {
       // 圖片
@@ -34,12 +38,7 @@ export default {
     };
   },
 
-  methods: {
-    //push
-    linkStep1() {
-      this.$router.push("/users/step1");
-    },
-  },
+  methods: {},
 };
 </script>
 <template>
@@ -186,11 +185,12 @@ export default {
       </div>
     </div>
   </div>
-  <div class="py-5">
-    <br />
-    <el-button @click="linkStep1" type="primary" plain class="ms-5 mt-5"
-      >開始看診</el-button
-    >
+  <div
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom"
+    class="py-5"
+  >
+    <HelloWorld />
   </div>
 </template>
 
