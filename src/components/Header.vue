@@ -64,10 +64,11 @@ export default {
 }
 a.router-link-active {
   font-weight: bold;
-}
-a.router-link-exact-active {
   color: #00c58e;
 }
+// a.router-link-exact-active {
+//   color: #00c58e;
+// }
 li {
   overflow: hidden;
 }

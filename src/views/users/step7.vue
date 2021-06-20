@@ -57,7 +57,7 @@ export default {
               ></el-step>
               <el-step
                 @click="linkStep4"
-                title="步驟 4 檢查、抽血檢驗"
+                title="步驟 4 檢查、抽血"
                 icon="el-icon-search"
               ></el-step>
               <el-step

@@ -108,7 +108,7 @@ export default {
           >
             <el-card>
               <h4>檢查</h4>
-              <p>檢查、抽血檢驗</p>
+              <p>檢查、抽血</p>
               <div class="demo-image__preview">
                 <el-image
                   style="width: 100px; height: 100px"

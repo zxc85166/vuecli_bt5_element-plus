@@ -41,5 +41,8 @@ export default {
   a.router-link-active {
     border-bottom: 2px solid #3498db;
   }
+  a.router-link-exact-active {
+    color: #00c58e;
+  }
 }
 </style>

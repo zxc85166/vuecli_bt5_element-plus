@@ -74,7 +74,7 @@ export default {
               ></el-step>
               <el-step
                 @click="linkStep4"
-                title="步驟 4 檢查、抽血檢驗"
+                title="步驟 4 檢查、抽血"
                 icon="el-icon-search"
               ></el-step>
               <el-step
@@ -104,15 +104,13 @@ export default {
         <div class="row">
           <div class="col-xl-12">
             <div class="pt-5 py-3">
-              <h1>
-                檢查、抽血檢驗 <br />
-                <p></p>
-                <h5>
-                  <strong>{{ $store.state.name }}</strong> 先生/小姐
-                  請依據掛號號碼等候檢查、抽血
-                </h5>
-                <nowDay />
-              </h1>
+              <h1>檢查、抽血檢驗</h1>
+              <p></p>
+              <h5>
+                <strong>{{ $store.state.name }}</strong> 先生/小姐
+                請依據掛號號碼等候檢查、抽血
+              </h5>
+              <nowDay />
             </div>
           </div>
         </div>
