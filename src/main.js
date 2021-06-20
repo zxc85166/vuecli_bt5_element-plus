@@ -7,8 +7,8 @@ import "bootstrap";
 import installElementPlus from "./plugins/element";
 import "aos/dist/aos.css";
 // 讓瀏覽器的全域環境可以使用到 $
-import jQuery from "jquery";
-window.$ = window.jQuery = jQuery;
+// import jQuery from "jquery";
+// window.$ = window.jQuery = jQuery;
 
 const app = createApp(App);
 installElementPlus(app);

@@ -23,6 +23,7 @@
         <el-button @click="linkStep1" type="primary" plain class="mt-5"
           >開始看診</el-button
         >
+        <p></p>
       </div>
     </div>
   </div>
@@ -37,7 +38,7 @@ export default {
     };
   },
   methods: {
-    //push
+    // push
     linkStep1() {
       this.$router.push("/users/step1");
     },
@@ -54,6 +55,7 @@ export default {
   // border-color: #c0c4cc;
   color: #000;
 }
+
 .hello {
   margin: auto;
   text-align: center;
