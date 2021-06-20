@@ -13,7 +13,7 @@ export default {
 };
 </script>
 <template>
-  <div>
+  <div id="headerhold">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -72,25 +72,15 @@ li {
   overflow: hidden;
 }
 
-a,
-a:visited {
-  color: inherit;
-}
-
-a:hover {
-  color: #0845eb;
-}
-a:after,
-a:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-}
-
 .logo {
   width: 40px;
 }
 .pointer {
   cursor: pointer;
+}
+#headerhold {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 </style>

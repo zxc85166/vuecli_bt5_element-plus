@@ -48,12 +48,7 @@ export default {
       <h1>流程</h1>
       <div class="block">
         <el-timeline>
-          <el-timeline-item
-            timestamp="步驟1"
-            placement="top"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-center"
-          >
+          <el-timeline-item timestamp="步驟1" placement="top">
             <el-card>
               <h4>網路掛號</h4>
               <p>填寫：身分證 / 居留證號碼 / 病歷號碼 以及 選擇看診方式</p>
@@ -187,6 +182,7 @@ export default {
   </div>
   <div
     data-aos="fade-up"
+    data-aos-delay="200"
     data-aos-anchor-placement="bottom-bottom"
     class="py-5"
   >

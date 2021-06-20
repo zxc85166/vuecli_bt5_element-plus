@@ -107,7 +107,12 @@
       <!--container-->
       <hr />
       <!-- 病人健康資料表 -->
-      <div class="container py-5">
+      <div
+        class="container py-5"
+        data-aos="zoom-out-down"
+        data-aos-anchor-placement="top-center"
+        data-aos-delay="50"
+      >
         <div class="row justify-content-center">
           <div class="col-md-8">
             <h3 class="text-center fw-bold">病人健康資料表</h3>
