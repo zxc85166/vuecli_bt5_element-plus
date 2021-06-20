@@ -9,7 +9,11 @@
       Name.lnegth =
       <span>{{ $store.getters.nameLength }}</span>
     </p> -->
-        <span> 請輸入您的姓名並按下Enter </span>
+        <span>
+          請輸入您的姓名並按下
+          <p style="color: red">Enter</p>
+          <p></p
+        ></span>
         <p></p>
         <el-input
           class="enterpriseName"
@@ -53,7 +57,7 @@ export default {
   // background-color: #b7d0e7;
   text-align: center;
   // border-color: #c0c4cc;
-  color: #000;
+  color: #1ec7c7;
 }
 
 .hello {
@@ -67,7 +71,6 @@ span {
   color: gray;
 }
 p > span {
-  color: blue;
   font-weight: bold;
 }
 </style>

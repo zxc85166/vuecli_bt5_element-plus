@@ -136,5 +136,8 @@ export default {
       url("https://cdn.pixabay.com/photo/2016/01/19/15/05/doctor-1149149_960_720.jpg")
         no-repeat center/cover;
   }
+  h5 > strong {
+    color: #0e6060;
+  }
 }
 </style>
