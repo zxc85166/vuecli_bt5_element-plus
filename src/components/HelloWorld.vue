@@ -11,7 +11,7 @@
     </p> -->
         <span>
           請輸入您的姓名並按下
-          <p style="color: red">Enter</p>
+          <font color="red">Enter</font>
           <p></p
         ></span>
         <p></p>
