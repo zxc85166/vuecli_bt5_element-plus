@@ -45,7 +45,7 @@ export default {
   <div id="index">
     <!-- 時間軸 -->
     <div class="container mx-auto px-5 pt-4">
-      <h1>流程</h1>
+      <h1>看診流程</h1>
       <div class="block">
         <el-timeline>
           <el-timeline-item timestamp="步驟1" placement="top">

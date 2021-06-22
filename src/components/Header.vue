@@ -80,7 +80,8 @@ li {
   cursor: pointer;
 }
 #headerhold {
-  position: fixed;
+  position: sticky;
+  top: 0px;
   z-index: 100;
   width: 100%;
 }
