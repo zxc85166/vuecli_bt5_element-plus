@@ -12,8 +12,7 @@
         <span>
           請輸入您的姓名並按下
           <font color="red">Enter</font>
-          <p></p
-        ></span>
+        </span>
         <p></p>
         <el-input
           class="enterpriseName"
