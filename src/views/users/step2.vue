@@ -70,37 +70,32 @@ export default {
             <el-steps :active="1" simple>
               <el-step
                 @click="linkStep1"
-                title="步驟 1 網路掛號"
+                title="網路掛號"
                 icon="el-icon-s-custom"
               ></el-step>
               <el-step
-                @click="linkStep2"
-                title="步驟 2 填寫初診單"
-                icon="el-icon-edit"
-              ></el-step>
-              <el-step
                 @click="linkStep3"
-                title="步驟 3 至各診間候診"
+                title="至各診間候診"
                 icon="el-icon-loading"
               ></el-step>
               <el-step
                 @click="linkStep4"
-                title="步驟 4 檢查、抽血"
+                title="檢查、抽血"
                 icon="el-icon-search"
               ></el-step>
               <el-step
                 @click="linkStep5"
-                title="步驟 5 櫃台批價"
+                title="櫃台批價"
                 icon="el-icon-printer"
               ></el-step>
               <el-step
                 @click="linkStep6"
-                title="步驟 6 藥局領藥"
+                title="藥局領藥"
                 icon="el-icon-sugar"
               ></el-step>
               <el-step
                 @click="linkStep7"
-                title="步驟 7 離院"
+                title="離院"
                 icon="el-icon-school"
               ></el-step>
             </el-steps>

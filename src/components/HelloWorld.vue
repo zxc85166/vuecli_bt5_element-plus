@@ -51,7 +51,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-::v-deep .enterpriseName .el-input__inner {
+:deep(.enterpriseName .el-input__inner) {
   width: 100%;
   // background-color: #b7d0e7;
   text-align: center;
