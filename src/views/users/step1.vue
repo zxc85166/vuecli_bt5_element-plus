@@ -19,9 +19,6 @@ export default {
     linkStep1() {
       this.$router.push("/users/step1");
     },
-    linkStep2() {
-      this.$router.push("/users/step2");
-    },
     linkStep3() {
       this.$router.push("/users/step3");
     },

@@ -1,46 +1,62 @@
 <script>
-// import About from "@/components/About.vue";
-
+import GetSheetDone from "get-sheet-done";
+import axios from "axios";
+import $ from "jquery";
 export default {
   components: {},
   data() {
     return {
-      // 圖片上傳
-      dialogImageUrl: "",
-      dialogVisible: false,
-      disabled: false,
-
-      // form
-      form: {
-        name: "",
-        address: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: "",
-      },
+      contents: null,
     };
   },
   methods: {
-    handleRemove(file) {
-      this.$refs.files.handleRemove(file);
+    click() {
+      axios
+        // .get("https://run.mocky.io/v3/fd35b8b4-c567-472f-af0d-353e8c8fc23e")
+        .get(
+          "https://spreadsheets.google.com/feeds/list/1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk/1/public/values?alt=json"
+        )
+        .then(function (response) {
+          console.log(response.data);
+        });
     },
-    handlePictureCardPreview(file) {
-      this.dialogImageUrl = file.url;
-      this.dialogVisible = true;
+    clickimg() {
+      axios
+        .get("https://run.mocky.io/v3/fd35b8b4-c567-472f-af0d-353e8c8fc23e")
+        // .get(
+        //   "https://spreadsheets.google.com/feeds/list/1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk/1/public/values?alt=json"
+        // )
+        .then((response) => (this.contents = response.data))
+        .catch(function (error) {
+          console.log(error);
+        });
     },
-    handleDownload(file) {
-      console.log(file);
+    clicktable() {
+      $.get(
+        "https://spreadsheets.google.com/feeds/list/1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk/1/public/values?alt=json",
+        function (data) {
+          var d = data.feed.entry;
+          var items = [];
+          for (var i in d) {
+            var item = {};
+            item.name = d[i].gsx$name.$t;
+            item.imagme = d[i].gsx$imagme.$t;
+            items.push(item);
+          }
+          console.table(items);
+        }
+      );
+    },
+    GetSheet() {
+      GetSheetDone.raw("1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk").then(
+        (sheet) => {
+          console.log(sheet);
+        }
+      );
     },
     //push
     linkStep1() {
       this.$router.push("/users/step1");
-    },
-    linkStep2() {
-      this.$router.push("/users/step2");
     },
     linkStep3() {
       this.$router.push("/users/step3");
@@ -108,105 +124,24 @@ export default {
     <div
       class="
         container
-        d-flex
         justify-content-center
         animate__animated animate__fadeInBottomLeft
         pb-4
       "
     >
-      <!-- form -->
-      <div class="login-box">
-        <el-form ref="form" :model="form" label-width="80px">
-          <div
-            class="container px-5 pt-4 border radius"
-            style="border-radius: 4px"
-          >
-            <!-- /////// -->
-            <el-upload action="#" list-type="picture-card" :auto-upload="false">
-              <template #default>
-                <i class="el-icon-plus"></i>
-              </template>
-              <template #file="{ file }">
-                <div>
-                  <img
-                    class="el-upload-list__item-thumbnail"
-                    :src="file.url"
-                    alt=""
-                  />
-                </div>
-              </template>
-            </el-upload>
-            <el-dialog v-model="dialogVisible">
-              <img width="100%" :src="dialogImageUrl" alt="" />
-            </el-dialog>
-            <!-- //// -->
-            <el-dialog v-model="dialogVisible">
-              <img width="100%" :src="dialogImageUrl" alt="" />
-            </el-dialog>
-
-            <label>上傳圖片：顯示比例長寬比 1:1</label>
-            <div class="pt-5">
-              <el-form-item label="姓名">
-                <el-input v-model="form.name" clearable></el-input>
-              </el-form-item>
-            </div>
-            <el-form-item label="住家地址">
-              <el-input v-model="form.address" clearable></el-input>
-            </el-form-item>
-            <el-form-item label="看診方式">
-              <el-select v-model="form.region" placeholder="看診方式">
-                <el-option label="電話看診" value="shanghai"></el-option>
-                <el-option label="到院看診" value="beijing"></el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="看診時間">
-              <el-col :span="11">
-                <el-date-picker
-                  type="date"
-                  placeholder="選擇日期"
-                  v-model="form.date1"
-                  style="width: 100%"
-                ></el-date-picker>
-              </el-col>
-              <el-col class="line" :span="2">-</el-col>
-              <el-col :span="11">
-                <el-time-picker
-                  placeholder="選擇時間"
-                  v-model="form.date2"
-                  style="width: 100%"
-                ></el-time-picker>
-              </el-col>
-            </el-form-item>
-            <el-form-item label="復康巴士">
-              <el-switch v-model="form.delivery"></el-switch>
-            </el-form-item>
-            <el-form-item label="過往病史">
-              <el-checkbox-group v-model="form.type">
-                <el-checkbox label="慢性病" name="type"></el-checkbox>
-                <el-checkbox label="藥物過敏" name="type"></el-checkbox>
-                <el-checkbox label="抽菸" name="type"></el-checkbox>
-                <el-checkbox label="喝酒" name="type"></el-checkbox>
-              </el-checkbox-group>
-            </el-form-item>
-            <el-form-item label="性別">
-              <el-radio-group v-model="form.resource">
-                <el-radio label="男性"></el-radio>
-                <el-radio label="女性"></el-radio>
-              </el-radio-group>
-            </el-form-item>
-            <el-form-item label="其他事項">
-              <el-input type="textarea" v-model="form.desc"></el-input>
-            </el-form-item>
-            <div class="pb-4">
-              <el-button type="primary" @click="linkStep3">
-                確認送出
-              </el-button>
-            </div>
+      <button @click="click" class="btn btn-warning">直接打spreadsheets</button>
+      <button @click="clickimg" class="btn btn-success">打mocky測圖</button>
+      <button @click="clicktable" class="btn btn-info">
+        打spreadsheets console table
+      </button>
+      <button @click="GetSheet" class="btn btn-danger">打API測表格</button>
+      <ul class="grid">
+        <li v-for="content in contents" :key="content.id">
+          <div class="imgage">
+            <img :src="content.image" />
           </div>
-        </el-form>
-      </div>
-
-      <!-- form -->
+        </li>
+      </ul>
     </div>
   </div>
 </template>
