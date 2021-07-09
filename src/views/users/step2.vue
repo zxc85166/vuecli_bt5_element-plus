@@ -1,7 +1,6 @@
 <script>
 import GetSheetDone from "get-sheet-done";
 import axios from "axios";
-import $ from "jquery";
 export default {
   components: {},
   data() {
@@ -31,28 +30,26 @@ export default {
           console.log(error);
         });
     },
-    clicktable() {
-      $.get(
-        "https://spreadsheets.google.com/feeds/list/1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk/1/public/values?alt=json",
-        function (data) {
-          var d = data.feed.entry;
-          var items = [];
-          for (var i in d) {
-            var item = {};
-            item.name = d[i].gsx$name.$t;
-            item.imagme = d[i].gsx$imagme.$t;
-            items.push(item);
-          }
-          console.table(items);
-        }
-      );
+    mocky() {
+      axios
+        .get("https://run.mocky.io/v3/fd35b8b4-c567-472f-af0d-353e8c8fc23e")
+        .then((res) => {
+          console.log(res.data);
+        });
     },
     GetSheet() {
-      GetSheetDone.raw("1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk").then(
-        (sheet) => {
-          console.log(sheet);
-        }
-      );
+      GetSheetDone.labeledCols(
+        "1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk"
+      ).then((sheet) => {
+        console.log(sheet.data);
+      });
+    },
+    GetSheetimg() {
+      GetSheetDone.labeledCols("1hmSpYoYMZCpa80Gatm0CwYtuPcCtnaheahyps63-tqk")
+        .then((sheet) => (this.contents = sheet.data))
+        .catch(function (error) {
+          console.log(error);
+        });
     },
     //push
     linkStep1() {
@@ -131,10 +128,11 @@ export default {
     >
       <button @click="click" class="btn btn-warning">直接打spreadsheets</button>
       <button @click="clickimg" class="btn btn-success">打mocky測圖</button>
-      <button @click="clicktable" class="btn btn-info">
-        打spreadsheets console table
+      <button @click="mocky" class="btn btn-info">打mocky</button>
+      <button @click="GetSheet" class="btn btn-danger">打GetSheetDone</button>
+      <button @click="GetSheetimg" class="btn btn-primary">
+        打GetSheetDone測圖
       </button>
-      <button @click="GetSheet" class="btn btn-danger">打API測表格</button>
       <ul class="grid">
         <li v-for="content in contents" :key="content.id">
           <div class="imgage">
